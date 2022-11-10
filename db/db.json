@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "4fc41ab6-2159-4602-9a5f-db9d8a7a29d8",
+      "picture": "https://picsum.photos/200/300?random=1",
+      "name": "Lester Curtis",
+      "password": "user",
+      "email": "lestercurtis@elentrix.com",
+      "phone": "+1 (938) 581-3473",
+      "isAdmin": false,
+      "isVIP": false,
+      "address": "856 Interborough Parkway, Gila, Maryland, 9124"
+    },
+    {
+      "id": "ff188f74-4eb6-478c-bb04-c003ebc9625e",
+      "picture": "https://picsum.photos/200/300?random=2",
+      "name": "Carter Gates",
+      "password": "user",
+      "email": "cartergates@elentrix.com",
+      "phone": "+1 (854) 436-3066",
+      "isAdmin": false,
+      "isVIP": false,
+      "address": "923 Devon Avenue, Fedora, New Mexico, 881"
+    },
+    {
+      "id": "a6d50a42-c148-4819-b7f8-31d1e39ac7b7",
+      "picture": "https://picsum.photos/200/300?random=3",
+      "name": "Buckner Barber",
+      "password": "user",
+      "email": "bucknerbarber@elentrix.com",
+      "phone": "+1 (845) 534-2048",
+      "isAdmin": false,
+      "isVIP": false,
+      "address": "671 Driggs Avenue, Soudan, Ohio, 4696"
+    },
+    {
+      "id": "M-G-1",
+      "picture": "https://picsum.photos/200/300?random=5",
+      "name": "Admin Administrator",
+      "password": "1",
+      "email": "admin@admin.com",
+      "phone": "+1 (801) 557-3305",
+      "isAdmin": true,
+      "isVIP": false,
+      "address": "837 Macon Street, Orviston, Delaware, 8401"
+    }
+  ],
+  "cars": [],
+  "rents": []
+}
