@@ -36,13 +36,24 @@
     {
       "id": "M-G-1",
       "picture": "https://picsum.photos/200/300?random=5",
-      "name": "Admin Administrator",
+      "name": "Admin Administrator1",
       "password": "1",
       "email": "admin@admin.com",
       "phone": "+1 (801) 557-3305",
-      "isAdmin": true,
+      "isAdmin": "on",
       "isVIP": false,
       "address": "837 Macon Street, Orviston, Delaware, 8401"
+    },
+    {
+      "picture": "https://picsum.photos/200/300?random=0.17797457382594495",
+      "name": "Martin Georgiev",
+      "email": "pesho@pesho.com",
+      "phone": "123333",
+      "password": "1234",
+      "address": "fgwfwfwf",
+      "isAdmin": false,
+      "isVIP": false,
+      "id": "asMRGPw"
     }
   ],
   "cars": [],
