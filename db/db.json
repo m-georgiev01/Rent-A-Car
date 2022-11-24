@@ -56,6 +56,103 @@
       "id": "asMRGPw"
     }
   ],
-  "cars": [],
+  "vehicles": [
+    {
+      "id": "c3f6fbc4-1563-4046-ae98-ccc31ca24d87",
+      "vehicleType": "economy",
+      "brand": "Volkswagen",
+      "model": "Golf",
+      "constructionYear": 2019,
+      "fuelType": "diesel",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/volkswagen/golf_lrg.jpg",
+      "pricePerDay": "15",
+      "count": "5"
+    },
+    {
+      "id": "1153f2df-2eff-4b40-a809-cdd1e025ed2b",
+      "vehicleType": "estate",
+      "brand": "Volkswagen",
+      "model": "Passat Variant",
+      "constructionYear": 2020,
+      "fuelType": "petrol",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/new_images/volkswagen/passat_variant_lrg.jpg",
+      "pricePerDay": "70",
+      "count": "3"
+    },
+    {
+      "id": "8d4ff6b6-87e2-4be4-8589-0037cc24f917",
+      "vehicleType": "luxury",
+      "brand": "BMW",
+      "model": "3-Series",
+      "constructionYear": 2018,
+      "fuelType": "diesel",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/bmw/3_series_lrg.jpg",
+      "pricePerDay": "150",
+      "count": "2"
+    },
+    {
+      "id": "dcaa532b-9826-49ac-9390-e12b6852d4cc",
+      "vehicleType": "SUV",
+      "brand": "Dacia",
+      "model": "Duster",
+      "constructionYear": 2018,
+      "fuelType": "petrol",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/dacia/duster_lrg.jpg",
+      "pricePerDay": "45",
+      "count": "7"
+    },
+    {
+      "id": "b715692c-224d-4a6f-a948-123eeba58965",
+      "vehicleType": "cargo",
+      "brand": "Renault",
+      "model": "Trafic",
+      "constructionYear": 2016,
+      "fuelType": "diesel",
+      "seats": "6",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/renault/trafic_lrg.jpg",
+      "pricePerDay": "300",
+      "count": "4"
+    },
+    {
+      "id": "9390-49ac-8d4ff6b6-a948-0037cc24f917",
+      "vehicleType": "economy",
+      "brand": "Peugeot",
+      "model": "e-208",
+      "constructionYear": 2019,
+      "fuelType": "electric",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/peugeot/208_lrg.jpg",
+      "pricePerDay": "25",
+      "count": "1"
+    },
+    {
+      "id": "123eeba58965-49ac-1153f2df-a948-ccc31ca24d87",
+      "vehicleType": "economy",
+      "brand": "Toyota",
+      "model": "Auris",
+      "constructionYear": 2020,
+      "fuelType": "hybrid",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/toyota/auris_lrg.jpg",
+      "pricePerDay": "22",
+      "count": "3"
+    },
+    {
+      "id": "0037cc24f917-49ac-1153f2df-a948-123eeba58965",
+      "vehicleType": "luxury",
+      "brand": "Audi",
+      "model": "A6",
+      "constructionYear": 2021,
+      "fuelType": "diesel",
+      "seats": "5",
+      "picture": "https://cdn2.rcstatic.com/images/car_images/web/audi/a6_lrg.jpg",
+      "pricePerDay": "160",
+      "count": "4"
+    }
+  ],
   "rents": []
 }

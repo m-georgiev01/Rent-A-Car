@@ -8,6 +8,8 @@ import { Login } from './components/auth/login/Login';
 import { Register } from './components/auth/register/Register';
 import { NonAuthenticatedRoute } from './utils/guards/NonAuthenticatedRoute';
 import { AuthenticatedRoute } from './utils/guards/AuthenticatedRoute';
+import { VehiclesList } from './components/vehicles/vehicles-list/VehiclesList';
+import { VehicleForm } from './components/vehicles/vehicle-form/VehicleForm';
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
           <Route path="/user/:id" element={ <User /> } />
           <Route path="/user/create" element={ <UserForm /> } />
           <Route path="/user/edit/:id" element={ <UserForm /> } />
+
+          <Route path="/vehicles-list" element={ <VehiclesList /> } />
+          <Route path="/vehicle/create" element={ <VehicleForm /> } />
+          <Route path="/vehicle/edit/:id" element={ <VehicleForm /> } />
         </Route>
       </Routes>
     </div>

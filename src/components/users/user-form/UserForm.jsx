@@ -3,10 +3,11 @@ import Button from 'react-bootstrap/Button';
 import './UserForm.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { getUserById, saveUser } from '../../../utils/services/user-requests';
+import { getLoggedUser, getUserById, saveUser } from '../../../utils/services/user-requests';
 
 export function UserForm() {
 
+    const loggedUser = getLoggedUser();
     const params = useParams();
     const navigate = useNavigate();
     const [user, setUser] =useState({
@@ -83,16 +84,22 @@ export function UserForm() {
                     <Form.Label>Address</Form.Label>
                     <Form.Control type="text" placeholder="Enter address" name="address" value={user.address} onChange={onInputChange}/>
                 </Form.Group>
-                
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Admin" name="isAdmin" checked={user.isAdmin} onChange={onInputChange}/>
-                </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="VIP" name="isVIP" checked={user.isVIP} onChange={onInputChange}/>
-                </Form.Group>
+                {
+                    loggedUser.isAdmin ?
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Admin" name="isAdmin" checked={user.isAdmin} onChange={onInputChange}/>
+                    </Form.Group> : ''
+                }
+                
+                {
+                    loggedUser.isAdmin ?
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="VIP" name="isVIP" checked={user.isVIP} onChange={onInputChange}/>
+                    </Form.Group> : ''
+                }
                 <Button variant="primary" type="submit">
-                    Submit 
+                    {user.id ? 'Edit User' : 'Create User'}
                 </Button>
             </Form>
         </div>

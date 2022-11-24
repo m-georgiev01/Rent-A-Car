@@ -2,9 +2,11 @@ import Card  from 'react-bootstrap/Card';
 import  Button  from 'react-bootstrap/Button';
 import './UserCard.scss'
 import { useNavigate} from 'react-router-dom';
+import { getLoggedUser } from '../../../utils/services/user-requests';
  
 export function UserCard ({ user, deleteUser}) {
 
+    const loggedUser = getLoggedUser();
     const navigate = useNavigate();
     const redirectToDetails = () => {
         navigate(`/user/${user.id}`);
@@ -67,12 +69,13 @@ export function UserCard ({ user, deleteUser}) {
                         { renderVIPDbInfo() }
                     </Card.Text>
 
+
                     <div className="btn-holder">
-                        <Button variant="primary" onClick={redirectToEdit}>Edit</Button>
-                        <Button variant="danger" onClick={() => deleteUser(user.id)} >Delete</Button>
+                        { loggedUser.id === user.id || loggedUser.isAdmin ? <Button variant="primary" onClick={redirectToEdit}>Edit</Button> : '' }
+                        { loggedUser.isAdmin && loggedUser.id !== user.id ? <Button variant="danger" onClick={() => deleteUser(user.id)} >Delete</Button> : '' }
                         <Button variant="info" onClick={redirectToDetails}>Details</Button>
                     </div>
-                </Card.Body>
+               </Card.Body>
             </Card>
         </div>
     )
