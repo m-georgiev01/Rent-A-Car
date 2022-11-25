@@ -4,7 +4,7 @@ import './UserCard.scss'
 import { useNavigate} from 'react-router-dom';
 import { getLoggedUser } from '../../../utils/services/user-requests';
  
-export function UserCard ({ user, deleteUser}) {
+export function UserCard ({ user, deleteUser, isInDetails}) {
 
     const loggedUser = getLoggedUser();
     const navigate = useNavigate();
@@ -73,7 +73,7 @@ export function UserCard ({ user, deleteUser}) {
                     <div className="btn-holder">
                         { loggedUser.id === user.id || loggedUser.isAdmin ? <Button variant="primary" onClick={redirectToEdit}>Edit</Button> : '' }
                         { loggedUser.isAdmin && loggedUser.id !== user.id ? <Button variant="danger" onClick={() => deleteUser(user.id)} >Delete</Button> : '' }
-                        <Button variant="info" onClick={redirectToDetails}>Details</Button>
+                        { isInDetails === true  ? '' :<Button variant="info" onClick={redirectToDetails}>Details</Button> }
                     </div>
                </Card.Body>
             </Card>

@@ -18,7 +18,7 @@ export function Header () {
         <div className="header">
            <Navbar bg="dark" expand="lg" variant='dark'>
                 <Container>
-                    <Navbar.Brand href="/">Rent-a-car</Navbar.Brand>
+                    <Navbar.Brand href="/vehicles-list">Rent-a-car</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">                  

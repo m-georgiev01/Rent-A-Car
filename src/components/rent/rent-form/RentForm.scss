@@ -1,0 +1,24 @@
+.rent-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    margin: 20px;
+
+    form{
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 10px;
+        width: 500px;
+
+        label{
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        p{
+            display: inline-block;
+        }
+        .total-wrapper{
+            font-size: x-large;    
+        }
+    }
+}

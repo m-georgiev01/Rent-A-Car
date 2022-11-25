@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getUserRentsById } from './rent-requests';
 
 const apiUrl = 'http://localhost:3005/users';
 const loggedUserKey = 'loggedUser';
@@ -69,4 +70,27 @@ export async function login(user) {
     localStorage.setItem(loggedUserKey, JSON.stringify(foundUser));
 
     return foundUser;
+}
+
+export async function checkVIP (user){
+
+    const today = new Date();
+    const daysAgo = new Date(today.getTime());
+    daysAgo.setDate(today.getDate() - 60);
+
+    const userRents = (await getUserRentsById(user.id)).data;
+
+    const userRentsLast60days = userRents.filter((rent) =>
+        new Date(rent.startDate) >= daysAgo &&
+        new Date(rent.endDate) <= new Date()
+        );
+
+        if(userRentsLast60days.length >= 3){
+            user.isVIP = true;
+        }else {
+            user.isVIP = false;
+        }
+    await saveUser(user);
+    logout();
+    localStorage.setItem(loggedUserKey, JSON.stringify(user));
 }

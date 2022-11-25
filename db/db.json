@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "4fc41ab6-2159-4602-9a5f-db9d8a7a29d8",
-      "picture": "https://picsum.photos/200/300?random=1",
+      "picture": "https://picsum.photos/300/200?random=1",
       "name": "Lester Curtis",
       "password": "user",
       "email": "lestercurtis@elentrix.com",
@@ -13,7 +13,7 @@
     },
     {
       "id": "ff188f74-4eb6-478c-bb04-c003ebc9625e",
-      "picture": "https://picsum.photos/200/300?random=2",
+      "picture": "https://picsum.photos/300/200?random=2",
       "name": "Carter Gates",
       "password": "user",
       "email": "cartergates@elentrix.com",
@@ -24,7 +24,7 @@
     },
     {
       "id": "a6d50a42-c148-4819-b7f8-31d1e39ac7b7",
-      "picture": "https://picsum.photos/200/300?random=3",
+      "picture": "https://picsum.photos/300/200?random=3",
       "name": "Buckner Barber",
       "password": "user",
       "email": "bucknerbarber@elentrix.com",
@@ -35,24 +35,24 @@
     },
     {
       "id": "M-G-1",
-      "picture": "https://picsum.photos/200/300?random=5",
+      "picture": "https://picsum.photos/300/200?random=5",
       "name": "Admin Administrator1",
       "password": "1",
       "email": "admin@admin.com",
       "phone": "+1 (801) 557-3305",
-      "isAdmin": "on",
+      "isAdmin": true,
       "isVIP": false,
       "address": "837 Macon Street, Orviston, Delaware, 8401"
     },
     {
-      "picture": "https://picsum.photos/200/300?random=0.17797457382594495",
+      "picture": "https://picsum.photos/300/200?random=0.17797457382594495",
       "name": "Martin Georgiev",
       "email": "pesho@pesho.com",
       "phone": "123333",
       "password": "1234",
       "address": "fgwfwfwf",
       "isAdmin": false,
-      "isVIP": false,
+      "isVIP": true,
       "id": "asMRGPw"
     }
   ],
@@ -67,7 +67,7 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/volkswagen/golf_lrg.jpg",
       "pricePerDay": "15",
-      "count": "5"
+      "count": 3
     },
     {
       "id": "1153f2df-2eff-4b40-a809-cdd1e025ed2b",
@@ -79,7 +79,7 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/new_images/volkswagen/passat_variant_lrg.jpg",
       "pricePerDay": "70",
-      "count": "3"
+      "count": 4
     },
     {
       "id": "8d4ff6b6-87e2-4be4-8589-0037cc24f917",
@@ -91,7 +91,7 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/bmw/3_series_lrg.jpg",
       "pricePerDay": "150",
-      "count": "2"
+      "count": 4
     },
     {
       "id": "dcaa532b-9826-49ac-9390-e12b6852d4cc",
@@ -103,7 +103,7 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/dacia/duster_lrg.jpg",
       "pricePerDay": "45",
-      "count": "7"
+      "count": 3
     },
     {
       "id": "b715692c-224d-4a6f-a948-123eeba58965",
@@ -115,7 +115,7 @@
       "seats": "6",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/renault/trafic_lrg.jpg",
       "pricePerDay": "300",
-      "count": "4"
+      "count": 6
     },
     {
       "id": "9390-49ac-8d4ff6b6-a948-0037cc24f917",
@@ -127,7 +127,7 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/peugeot/208_lrg.jpg",
       "pricePerDay": "25",
-      "count": "1"
+      "count": 5
     },
     {
       "id": "123eeba58965-49ac-1153f2df-a948-ccc31ca24d87",
@@ -139,7 +139,7 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/toyota/auris_lrg.jpg",
       "pricePerDay": "22",
-      "count": "3"
+      "count": 5
     },
     {
       "id": "0037cc24f917-49ac-1153f2df-a948-123eeba58965",
@@ -151,8 +151,49 @@
       "seats": "5",
       "picture": "https://cdn2.rcstatic.com/images/car_images/web/audi/a6_lrg.jpg",
       "pricePerDay": "160",
-      "count": "4"
+      "count": 3
     }
   ],
-  "rents": []
+  "rents": [
+    {
+      "userId": "asMRGPw",
+      "vehicleId": "1153f2df-2eff-4b40-a809-cdd1e025ed2b",
+      "startDate": "2022-11-25",
+      "endDate": "2022-11-25",
+      "total": "224.00",
+      "id": 1
+    },
+    {
+      "userId": "asMRGPw",
+      "vehicleId": "b715692c-224d-4a6f-a948-123eeba58965",
+      "startDate": "2022-11-25",
+      "endDate": "2022-11-25",
+      "total": "600.00",
+      "id": 2
+    },
+    {
+      "userId": "asMRGPw",
+      "vehicleId": "123eeba58965-49ac-1153f2df-a948-ccc31ca24d87",
+      "startDate": "2022-11-25",
+      "endDate": "2022-11-25",
+      "total": "22.00",
+      "id": 3
+    },
+    {
+      "userId": "asMRGPw",
+      "vehicleId": "123eeba58965-49ac-1153f2df-a948-ccc31ca24d87",
+      "startDate": "2022-11-25",
+      "endDate": "2022-11-25",
+      "total": "22.00",
+      "id": 4
+    },
+    {
+      "userId": "M-G-1",
+      "vehicleId": "123eeba58965-49ac-1153f2df-a948-ccc31ca24d87",
+      "startDate": "2022-11-25",
+      "endDate": "2022-11-25",
+      "total": "22.00",
+      "id": 5
+    }
+  ]
 }

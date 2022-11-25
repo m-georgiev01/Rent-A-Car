@@ -10,6 +10,7 @@ import { NonAuthenticatedRoute } from './utils/guards/NonAuthenticatedRoute';
 import { AuthenticatedRoute } from './utils/guards/AuthenticatedRoute';
 import { VehiclesList } from './components/vehicles/vehicles-list/VehiclesList';
 import { VehicleForm } from './components/vehicles/vehicle-form/VehicleForm';
+import { RentForm } from './components/rent/rent-form/RentForm';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           <Route path="/vehicles-list" element={ <VehiclesList /> } />
           <Route path="/vehicle/create" element={ <VehicleForm /> } />
           <Route path="/vehicle/edit/:id" element={ <VehicleForm /> } />
+
+          <Route path="/rent/create/:id" element={ <RentForm /> } />
         </Route>
       </Routes>
     </div>

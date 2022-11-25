@@ -4,8 +4,8 @@ import './VehicleCard.scss'
 import { getLoggedUser } from '../../../utils/services/user-requests';
 import { useNavigate } from 'react-router-dom';
 
-export function VehicleCard ({ vehicle, deleteVehicle }) {
-
+export function VehicleCard ({ vehicle, deleteVehicle, isInRentInfo }) {
+    
     const loggedUser = getLoggedUser();
     const navigate = useNavigate();
 
@@ -13,8 +13,11 @@ export function VehicleCard ({ vehicle, deleteVehicle }) {
         return <p>No vehicle!</p>;
     }
 
-    const redirectToEdit = () =>{
+    const redirectToEdit = () => {
         navigate(`/vehicle/edit/${vehicle.id}`);
+    }
+    const redirectToRentForm = () => {
+        navigate(`/rent/create/${vehicle.id}`);
     }
 
     return (
@@ -52,12 +55,16 @@ export function VehicleCard ({ vehicle, deleteVehicle }) {
                         <span className="key">Currently available: </span>
                         <span className="value">{ vehicle.count }</span>
                     </Card.Text>
-
-                    <div className="btn-holder">
-                        { loggedUser.isAdmin ? <Button variant="primary" onClick={redirectToEdit}>Edit</Button> : '' } 
-                        { loggedUser.isAdmin ? <Button variant="danger" onClick={() => deleteVehicle(vehicle.id)}>Delete</Button> : ''}
-                        <Button variant="dark">Rent</Button>
-                    </div>
+                    
+                    {
+                        isInRentInfo === undefined ? 
+                        <div className="btn-holder">
+                            { loggedUser.isAdmin ? <Button variant="primary" onClick={redirectToEdit}>Edit</Button> : '' } 
+                            { loggedUser.isAdmin ? <Button variant="danger" onClick={() => deleteVehicle(vehicle.id)}>Delete</Button> : ''}
+                            <Button variant="dark" onClick={redirectToRentForm} >Rent</Button>
+                        </div> : ''
+                    }
+                    
                 </Card.Body>
             </Card>
         </div>
